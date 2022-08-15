@@ -17,14 +17,14 @@ const User = mongoose.Schema({
         type: String,
         required: true
     },
-    alamat:{
-        type: String,
-        required: true
-    },
     jenis_kelamin:{
         type: String,
         required: true
-    }
+    },
+    alamat:{
+        type: String,
+        required: true
+    }, 
 });
  
 export default mongoose.model('Users', User);
