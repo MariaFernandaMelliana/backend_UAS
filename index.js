@@ -4,7 +4,7 @@ import cors from "cors";
 import UserRoute from "./routes/UserRoute.js";
  
 const app = express();
-mongoose.connect('mongodb://mariafernanda:mariafernanda@ac-9djembq-shard-00-00.jopzif0.mongodb.net:27017,ac-9djembq-shard-00-01.jopzif0.mongodb.net:27017,ac-9djembq-shard-00-02.jopzif0.mongodb.net:27017/?ssl=true&replicaSet=atlas-o3c8bu-shard-0&authSource=admin&retryWrites=true&w=majority',{
+mongoose.connect('mongodb://localhost:27017/project_uas_db',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -16,4 +16,4 @@ app.use(cors());
 app.use(express.json());
 app.use(UserRoute);
  
-app.listen(process.env.PORT || 5000, ()=> console.log('Server up and running...'));
+app.listen(5000, ()=> console.log('Server up and running...'));
